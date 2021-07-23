@@ -76,3 +76,6 @@ _pkg/
 server/_appdata
 server/package-lock.json
 client/package-lock.json
+
+# mac os
+.DS_Store
