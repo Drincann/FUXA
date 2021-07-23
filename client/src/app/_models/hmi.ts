@@ -153,6 +153,13 @@ export enum GaugeActionsType {
     downup = 'shapes.action-downup'
 }
 
+export enum SLDActionsType {
+  open = 'shapes.sld.action-open',
+  close = 'shapes.sld.action-close',
+  bad = 'shapes.sld.action-bad',
+  intermediate = 'shapes.sld.action-intermediate'
+}
+
 export class GaugeAction {
     variableId: string;
     variableSrc: string;

@@ -338,6 +338,11 @@
     "editor.tools-ungroup-title": "Ungroup Elements [G]",
     "editor.tools-hyperlink-title": "Make Hyperlink",
 
+    "shapes.sld.action-open": "sld-Open",
+    "shapes.sld.action-close": "sld-Close",
+    "shapes.sld.action-bad": "sld-Bad",
+    "shapes.sld.action-intermediat": "sld-Intermediat",
+
     "shapes.action-hide": "Hide",
     "shapes.action-show": "Show",
     "shapes.action-blink": "Blink",
