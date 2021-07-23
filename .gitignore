@@ -79,3 +79,6 @@ client/package-lock.json
 
 # mac os
 .DS_Store
+
+# dist
+client/dist/*
