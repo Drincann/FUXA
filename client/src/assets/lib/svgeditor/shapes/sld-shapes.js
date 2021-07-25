@@ -96,7 +96,25 @@
         'stroke-width': 5,
       }
     }]
-  }
+  }, {
+    name: 'jinxianchuxian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/jinxianchuxian1.svg', content: [{ id: '', type: 'type', attr: { type: 'jinxianchuxian' } }, {
+      id: '', type: 'path', attr: {
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 139.17096,170.98447 -4.49972,0.001 -4.49972,0.001 2.24861,-3.8976 2.24862,-3.89759 2.2511,3.89615 z",
+        transform: "matrix(0.61739936,0,0,0.71277948,-80.311027,-116.31255)",
+      }
+    }]
+  }, {
+    name: 'jinxianchuxian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/jinxianchuxian2.svg', content: [{ id: '', type: 'type', attr: { type: 'jinxianchuxian' } }, {
+      id: '', type: 'path', attr: {
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 139.17096,170.98447 -4.49972,0.001 -4.49972,0.001 2.24861,-3.8976 2.24862,-3.89759 2.2511,3.89615 z",
+        transform: "matrix(0.61739936,0,0,0.71277948,-80.311027,-116.31255)",
+      }
+    }]
+  },
   ];
 
   for (var i = 0; i < shapes.length; i++) {
