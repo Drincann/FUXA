@@ -114,6 +114,78 @@
         transform: "matrix(0.61739936,0,0,0.71277948,-80.311027,-116.31255)",
       }
     }]
+  }, {
+    name: 'pt1', ico: 'assets/lib/svgeditor/shapes/sldsvg/pt1.svg', content: [{ id: '', type: 'type', attr: { type: 'pt' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 7.9415887,4.9167315 c 0,1.322902 0,2.645818 0,3.96875",
+      }
+    }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "15.076933",
+        cx: "10.647635",
+        stroke: '#92d050',
+        fill: 'none',
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "12.060362",
+        cx: "7.9138403",
+        stroke: '#92d050',
+        fill: 'none',
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "15.080763",
+        cx: "5.1292562",
+        stroke: '#92d050',
+        fill: 'none',
+        'stroke-width': 5,
+      }
+    }]
+  }, {
+    name: 'pt2', ico: 'assets/lib/svgeditor/shapes/sldsvg/pt2.svg', content: [{ id: '', type: 'type', attr: { type: 'pt' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 7.9415887,4.9167315 c 0,1.322902 0,2.645818 0,3.96875",
+      }
+    }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "15.076933",
+        cx: "10.647635",
+        stroke: '#a9a9a9',
+        fill: 'none',
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "12.060362",
+        cx: "7.9138403",
+        stroke: '#a9a9a9',
+        fill: 'none',
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "15.080763",
+        cx: "5.1292562",
+        stroke: '#a9a9a9',
+        fill: 'none',
+        'stroke-width': 5,
+      }
+    }]
   },
   ];
 
