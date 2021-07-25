@@ -246,6 +246,24 @@
         d: "m 20.263446,9.6716057 c 2.65e-4,2.1309253 2.65e-4,4.2618723 0,6.3928453",
       }
     },]
+  }, {
+    name: 'muxian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/muxian1.svg', content: [{ id: '', type: 'type', attr: { type: 'muxian' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 23.561879,14.569378 c -7.689208,0 -15.3785026,0 -23.06788579,0",
+      }
+    },]
+  }, {
+    name: 'muxian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/muxian2.svg', content: [{ id: '', type: 'type', attr: { type: 'muxian' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 23.561879,14.569378 c -7.689208,0 -15.3785026,0 -23.06788579,0",
+      }
+    },]
   },
   ];
 
