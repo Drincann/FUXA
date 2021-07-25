@@ -186,6 +186,66 @@
         'stroke-width': 5,
       }
     }]
+  }, {
+    name: 'dixian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/dixian1.svg', content: [{ id: '', type: 'type', attr: { type: 'dixian' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 11.216166,12.621519 c -3.5496193,2.6e-4 -7.0992713,2.6e-4 -10.64896467,0",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 11.142426,4.5309512 c 2.65e-4,5.467044 2.65e-4,10.9341448 0,16.4013118",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 15.776892,7.7980993 c 2.65e-4,3.3141797 2.65e-4,6.6283927 0,9.9426467",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 20.263446,9.6716057 c 2.65e-4,2.1309253 2.65e-4,4.2618723 0,6.3928453",
+      }
+    },]
+  }, {
+    name: 'dixian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/dixian2.svg', content: [{ id: '', type: 'type', attr: { type: 'dixian' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 11.216166,12.621519 c -3.5496193,2.6e-4 -7.0992713,2.6e-4 -10.64896467,0",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 11.142426,4.5309512 c 2.65e-4,5.467044 2.65e-4,10.9341448 0,16.4013118",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 15.776892,7.7980993 c 2.65e-4,3.3141797 2.65e-4,6.6283927 0,9.9426467",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 20.263446,9.6716057 c 2.65e-4,2.1309253 2.65e-4,4.2618723 0,6.3928453",
+      }
+    },]
   },
   ];
 
