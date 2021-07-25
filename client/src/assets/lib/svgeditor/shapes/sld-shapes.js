@@ -58,6 +58,44 @@
         'stroke-width': 5
       }
     }]
+  }, {
+    name: 'ct1', ico: 'assets/lib/svgeditor/shapes/sldsvg/ct1.svg', content: [{ id: '', type: 'type', attr: { type: 'ct' } }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "6.74439",
+        cx: "3.35259",
+        stroke: "#92d050",
+        fill: "none",
+        "stroke-width": 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        switcher: 'switcher',
+        d: "m3.35259,0.1399c0,4.40967 0,8.81939 0,13.22917",
+        stroke: "#92d050",
+        fill: "#92d050",
+        'stroke-width': 5,
+      }
+    }]
+  }, {
+    name: 'ct2', ico: 'assets/lib/svgeditor/shapes/sldsvg/ct2.svg', content: [{ id: '', type: 'type', attr: { type: 'ct' } }, {
+      id: '', type: 'circle', attr: {
+        r: "3.175",
+        cy: "6.74439",
+        cx: "3.35259",
+        stroke: "#a9a9a9",
+        fill: "none",
+        "stroke-width": 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        switcher: 'switcher',
+        d: "m3.35259,0.1399c0,4.40967 0,8.81939 0,13.22917",
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        'stroke-width': 5,
+      }
+    }]
   }
   ];
 
