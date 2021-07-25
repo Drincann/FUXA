@@ -187,7 +187,7 @@
       }
     }]
   }, {
-    name: 'dixian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/dixian1.svg', content: [{ id: '', type: 'type', attr: { type: 'dixian' } }, {
+    name: 'jiedi', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedi1.svg', content: [{ id: '', type: 'type', attr: { type: 'jiedi' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#92d050",
@@ -217,7 +217,7 @@
       }
     },]
   }, {
-    name: 'dixian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/dixian2.svg', content: [{ id: '', type: 'type', attr: { type: 'dixian' } }, {
+    name: 'jiedi', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedi.svg', content: [{ id: '', type: 'type', attr: { type: 'jiedi' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#a9a9a9",
