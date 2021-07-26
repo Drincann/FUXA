@@ -264,6 +264,114 @@
         d: "m 23.561879,14.569378 c -7.689208,0 -15.3785026,0 -23.06788579,0",
       }
     },]
+  }, {
+    name: 'duanluqi1', ico: 'assets/lib/svgeditor/shapes/sldsvg/duanluqi1.svg', content: [{ id: '', type: 'type', attr: { type: 'duanluqi' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 14.295985,27.94559 c 0,1.54344 0,3.08696 0,4.63044",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 14.276013,8.69154 c 0,1.33392 0,2.66789 0,4.00182",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 12.689077,11.12306 3.287375,3.01636",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 12.610806,14.13942 3.483052,-2.98045",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'close',
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 8.638894,16.66172 c 1.885641,3.76118 3.771338,7.52247 5.657091,11.28387",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'open',
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 14.295985,12.89718 c 0,5.01601 0,10.03227 0,15.04841",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'intermediate',
+        'stroke-width': 5,
+        stroke: "#92d050",
+        fill: "#92d050",
+        d: "m 17.473168,27.94414 c -2.135653,2.7e-4 -4.271329,2.7e-4 -6.407031,0",
+      }
+    },]
+  }, {
+    name: 'duanluqi2', ico: 'assets/lib/svgeditor/shapes/sldsvg/duanluqi2.svg', content: [{ id: '', type: 'type', attr: { type: 'duanluqi' } }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 14.295985,27.94559 c 0,1.54344 0,3.08696 0,4.63044",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 14.276013,8.69154 c 0,1.33392 0,2.66789 0,4.00182",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 12.689077,11.12306 3.287375,3.01636",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 12.610806,14.13942 3.483052,-2.98045",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'close',
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 8.638894,16.66172 c 1.885641,3.76118 3.771338,7.52247 5.657091,11.28387",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'open',
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 14.295985,12.89718 c 0,5.01601 0,10.03227 0,15.04841",
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'intermediate',
+        'stroke-width': 5,
+        stroke: "#a9a9a9",
+        fill: "#a9a9a9",
+        d: "m 17.473168,27.94414 c -2.135653,2.7e-4 -4.271329,2.7e-4 -6.407031,0",
+      }
+    },]
   },
   ];
 
