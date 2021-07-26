@@ -342,6 +342,53 @@
         d: "m 17.473168,27.94414 c -2.135653,2.7e-4 -4.271329,2.7e-4 -6.407031,0",
       }
     },]
+  }, {
+    name: 'jiedikaiguan', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedikaiguan1.svg', content: [{ id: '', type: 'type', attr: { type: 'jiedikaiguan' } }, {
+      id: '', type: 'path', attr: {
+        d: "m 16.516625,4.8451356 c 0,0.822645 0,1.645333 0,2.467999",
+        stroke: "#ffc000",
+        fill: "#ffc000",
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        d: "m 23.969525,6.2548006 c -2.484272,2.7e-4 -4.968572,2.7e-4 -7.4529,0",
+        stroke: "#ffc000",
+        fill: "#ffc000",
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        d: "m 3.8166209,6.2548006 c -1.1943793,2.7e-4 -2.3887712,2.7e-4 -3.58317952,0",
+        stroke: "#ffc000",
+        fill: "#ffc000",
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'close',
+        d: "M 3.8166209,6.2548006 C 7.657821,4.0771656 11.498757,1.8992656 15.339428,-0.27889868",
+        stroke: "#ffc000",
+        fill: "#ffc000",
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'open',
+        d: "m 16.516625,6.2548006 c -4.233286,2.7e-4 -8.4666158,2.7e-4 -12.7000041,0",
+        stroke: "#ffc000",
+        fill: "#ffc000",
+        'stroke-width': 5,
+      }
+    }, {
+      id: '', type: 'path', attr: {
+        type: 'intermediate',
+        d: "m 3.8166206,4.8451356 c 2.65e-4,0.822645 2.65e-4,1.645333 0,2.467999",
+        stroke: "#ffc000",
+        fill: "#ffc000",
+        'stroke-width': 5,
+      }
+    }]
   },
   ];
 
