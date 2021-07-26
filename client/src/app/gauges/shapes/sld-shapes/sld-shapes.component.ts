@@ -141,16 +141,42 @@ export class SldShapesComponent extends GaugeBaseComponent {
     } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.open) {
       if (eval("$(element.node).find('type').attr('type')") == 'shouche') {
         eval(`$(element.node).find("path[switcher='switcher']").show()`)
+      } else if (eval("$(element.node).find('type').attr('type')") == 'duanluqi') {
+        eval(`
+        $(element.node).find("path[type='open']").show();
+        $(element.node).find("path[type='close']").hide();
+        $(element.node).find("path[type='intermediate']").hide();
+        `)
       }
       console.log({ element, type, gaugeStatus });
     } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.close) {
       if (eval("$(element.node).find('type').attr('type')") == 'shouche') {
         eval(`$(element.node).find("path[switcher='switcher']").hide()`)
+      } else if (eval("$(element.node).find('type').attr('type')") == 'duanluqi') {
+        eval(`
+        $(element.node).find("path[type='open']").hide();
+        $(element.node).find("path[type='close']").show();
+        $(element.node).find("path[type='intermediate']").hide();
+        `)
       }
       console.log({ element, type, gaugeStatus });
     } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.intermediate) {
+      if (eval("$(element.node).find('type').attr('type')") == 'duanluqi') {
+        eval(`
+        $(element.node).find("path[type='open']").hide();
+        $(element.node).find("path[type='close']").hide();
+        $(element.node).find("path[type='intermediate']").show();
+        `)
+      }
       console.log({ element, type, gaugeStatus });
     } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.bad) {
+      if (eval("$(element.node).find('type').attr('type')") == 'duanluqi') {
+        eval(`
+        $(element.node).find("path[type='open']").show();
+        $(element.node).find("path[type='close']").show();
+        $(element.node).find("path[type='intermediate']").hide();
+        `)
+      }
       console.log({ element, type, gaugeStatus });
     }
   }
