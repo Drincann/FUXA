@@ -15,7 +15,7 @@
   // 'attr': element attribute, depending of type
 
   var shapes = [{
-    name: 'shouche1', ico: 'assets/lib/svgeditor/shapes/sldsvg/shouche1.svg', content: [{ id: '', type: 'type', attr: { type: 'shouche' } }, {
+    name: 'shouche1', ico: 'assets/lib/svgeditor/shapes/sldsvg/shouche1.svg', content: [{ id: '', type: 'input', attr: { type: 'shouche' } }, {
       id: '', type: 'path', attr: {
         d: 'm0.339568,1.144924c-0.0458,1.80611 1.3836,3.30982 3.18972,3.35559c1.80611,0.0458 3.3093,-1.38362 3.35507,-3.18973l-0.19682,-0.005c-0.0431,1.69976 -1.45354,3.04252 -3.1533,2.99944c-1.69978,-0.0431 -3.04247,-1.4556 -2.99939,-3.15536l-0.19528,-0.00494z',
         stroke: "#92d050",
@@ -23,7 +23,7 @@
       }
     }, {
       id: '', type: 'path', attr: {
-        switcher: 'switcher',
+        type: 'switcher',
         d: "m2.338798,0.123794l2.59841,0l0,2.59841l-2.59841,0l0,-2.59841z",
         stroke: "#92d050",
         fill: "#92d050"
@@ -37,7 +37,7 @@
       }
     }]
   }, {
-    name: 'shouche2', ico: 'assets/lib/svgeditor/shapes/sldsvg/shouche2.svg', content: [{ id: '', type: 'type', attr: { type: 'shouche' } }, {
+    name: 'shouche2', ico: 'assets/lib/svgeditor/shapes/sldsvg/shouche2.svg', content: [{ id: '', type: 'input', attr: { type: 'shouche' } }, {
       id: '', type: 'path', attr: {
         d: 'm0.339568,1.144924c-0.0458,1.80611 1.3836,3.30982 3.18972,3.35559c1.80611,0.0458 3.3093,-1.38362 3.35507,-3.18973l-0.19682,-0.005c-0.0431,1.69976 -1.45354,3.04252 -3.1533,2.99944c-1.69978,-0.0431 -3.04247,-1.4556 -2.99939,-3.15536l-0.19528,-0.00494z',
         stroke: "#a9a9a9",
@@ -45,7 +45,7 @@
       }
     }, {
       id: '', type: 'path', attr: {
-        switcher: 'switcher',
+        type: 'switcher',
         d: "m2.338798,0.123794l2.59841,0l0,2.59841l-2.59841,0l0,-2.59841z",
         stroke: "#a9a9a9",
         fill: "#a9a9a9"
@@ -59,7 +59,7 @@
       }
     }]
   }, {
-    name: 'ct1', ico: 'assets/lib/svgeditor/shapes/sldsvg/ct1.svg', content: [{ id: '', type: 'type', attr: { type: 'ct' } }, {
+    name: 'ct1', ico: 'assets/lib/svgeditor/shapes/sldsvg/ct1.svg', content: [{ id: '', type: 'input', attr: { type: 'ct' } }, {
       id: '', type: 'circle', attr: {
         r: "3.175",
         cy: "6.74439",
@@ -70,7 +70,6 @@
       }
     }, {
       id: '', type: 'path', attr: {
-        switcher: 'switcher',
         d: "m3.35259,0.1399c0,4.40967 0,8.81939 0,13.22917",
         stroke: "#92d050",
         fill: "#92d050",
@@ -78,7 +77,7 @@
       }
     }]
   }, {
-    name: 'ct2', ico: 'assets/lib/svgeditor/shapes/sldsvg/ct2.svg', content: [{ id: '', type: 'type', attr: { type: 'ct' } }, {
+    name: 'ct2', ico: 'assets/lib/svgeditor/shapes/sldsvg/ct2.svg', content: [{ id: '', type: 'input', attr: { type: 'ct' } }, {
       id: '', type: 'circle', attr: {
         r: "3.175",
         cy: "6.74439",
@@ -89,7 +88,6 @@
       }
     }, {
       id: '', type: 'path', attr: {
-        switcher: 'switcher',
         d: "m3.35259,0.1399c0,4.40967 0,8.81939 0,13.22917",
         stroke: "#a9a9a9",
         fill: "#a9a9a9",
@@ -97,7 +95,7 @@
       }
     }]
   }, {
-    name: 'jinxianchuxian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/jinxianchuxian1.svg', content: [{ id: '', type: 'type', attr: { type: 'jinxianchuxian' } }, {
+    name: 'jinxianchuxian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/jinxianchuxian1.svg', content: [{ id: '', type: 'input', attr: { type: 'jinxianchuxian' } }, {
       id: '', type: 'path', attr: {
         stroke: "#92d050",
         fill: "#92d050",
@@ -106,7 +104,7 @@
       }
     }]
   }, {
-    name: 'jinxianchuxian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/jinxianchuxian2.svg', content: [{ id: '', type: 'type', attr: { type: 'jinxianchuxian' } }, {
+    name: 'jinxianchuxian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/jinxianchuxian2.svg', content: [{ id: '', type: 'input', attr: { type: 'jinxianchuxian' } }, {
       id: '', type: 'path', attr: {
         stroke: "#a9a9a9",
         fill: "#a9a9a9",
@@ -115,7 +113,7 @@
       }
     }]
   }, {
-    name: 'pt1', ico: 'assets/lib/svgeditor/shapes/sldsvg/pt1.svg', content: [{ id: '', type: 'type', attr: { type: 'pt' } }, {
+    name: 'pt1', ico: 'assets/lib/svgeditor/shapes/sldsvg/pt1.svg', content: [{ id: '', type: 'input', attr: { type: 'pt' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#92d050",
@@ -151,7 +149,7 @@
       }
     }]
   }, {
-    name: 'pt2', ico: 'assets/lib/svgeditor/shapes/sldsvg/pt2.svg', content: [{ id: '', type: 'type', attr: { type: 'pt' } }, {
+    name: 'pt2', ico: 'assets/lib/svgeditor/shapes/sldsvg/pt2.svg', content: [{ id: '', type: 'input', attr: { type: 'pt' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#a9a9a9",
@@ -187,7 +185,7 @@
       }
     }]
   }, {
-    name: 'jiedi', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedi1.svg', content: [{ id: '', type: 'type', attr: { type: 'jiedi' } }, {
+    name: 'jiedi', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedi1.svg', content: [{ id: '', type: 'input', attr: { type: 'jiedi' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#ffff00",
@@ -217,7 +215,7 @@
       }
     },]
   }, {
-    name: 'muxian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/muxian1.svg', content: [{ id: '', type: 'type', attr: { type: 'muxian' } }, {
+    name: 'muxian1', ico: 'assets/lib/svgeditor/shapes/sldsvg/muxian1.svg', content: [{ id: '', type: 'input', attr: { type: 'muxian' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#92d050",
@@ -226,7 +224,7 @@
       }
     },]
   }, {
-    name: 'muxian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/muxian2.svg', content: [{ id: '', type: 'type', attr: { type: 'muxian' } }, {
+    name: 'muxian2', ico: 'assets/lib/svgeditor/shapes/sldsvg/muxian2.svg', content: [{ id: '', type: 'input', attr: { type: 'muxian' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#a9a9a9",
@@ -235,7 +233,7 @@
       }
     },]
   }, {
-    name: 'duanluqi1', ico: 'assets/lib/svgeditor/shapes/sldsvg/duanluqi1.svg', content: [{ id: '', type: 'type', attr: { type: 'duanluqi' } }, {
+    name: 'duanluqi1', ico: 'assets/lib/svgeditor/shapes/sldsvg/duanluqi1.svg', content: [{ id: '', type: 'input', attr: { type: 'duanluqi' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#92d050",
@@ -289,7 +287,7 @@
       }
     },]
   }, {
-    name: 'duanluqi2', ico: 'assets/lib/svgeditor/shapes/sldsvg/duanluqi2.svg', content: [{ id: '', type: 'type', attr: { type: 'duanluqi' } }, {
+    name: 'duanluqi2', ico: 'assets/lib/svgeditor/shapes/sldsvg/duanluqi2.svg', content: [{ id: '', type: 'input', attr: { type: 'duanluqi' } }, {
       id: '', type: 'path', attr: {
         'stroke-width': 5,
         stroke: "#a9a9a9",
@@ -343,7 +341,7 @@
       }
     },]
   }, {
-    name: 'jiedikaiguan', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedikaiguan1.svg', content: [{ id: '', type: 'type', attr: { type: 'jiedikaiguan' } }, {
+    name: 'jiedikaiguan', ico: 'assets/lib/svgeditor/shapes/sldsvg/jiedikaiguan1.svg', content: [{ id: '', type: 'input', attr: { type: 'jiedikaiguan' } }, {
       id: '', type: 'path', attr: {
         d: "m 16.516625,4.8451356 c 0,0.822645 0,1.645333 0,2.467999",
         stroke: "#ffc000",
