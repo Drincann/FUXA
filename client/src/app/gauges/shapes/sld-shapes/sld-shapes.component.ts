@@ -22,8 +22,6 @@ export class SldShapesComponent extends GaugeBaseComponent {
   static LabelTag = 'AnimProcEng';
 
   static actionsType = {
-    stop: GaugeActionsType.stop, clockwise: GaugeActionsType.clockwise, anticlockwise: GaugeActionsType.anticlockwise, downup: GaugeActionsType.downup,
-    hide: GaugeActionsType.hide, show: GaugeActionsType.show,
     open: SLDActionsType.open, close: SLDActionsType.close, intermediate: SLDActionsType.intermediate, bad: SLDActionsType.bad
   };
 
@@ -93,52 +91,15 @@ export class SldShapesComponent extends GaugeBaseComponent {
   }
 
   static processAction(act: GaugeAction, svgele: any, value: any, gaugeStatus: GaugeStatus) {
-    if (this.actionsType[act.type] === this.actionsType.hide) {
-      if (act.range.min <= value && act.range.max >= value) {
-        let element = SVG.adopt(svgele.node);
-        this.runActionHide(element, act.type, gaugeStatus);
-      }
-    } else if (this.actionsType[act.type] === this.actionsType.show) {
-      if (act.range.min <= value && act.range.max >= value) {
-        let element = SVG.adopt(svgele.node);
-        this.runActionShow(element, act.type, gaugeStatus);
-      }
-    } else {
-      if (act.range.min <= value && act.range.max >= value) {
-        var element = SVG.adopt(svgele.node);
-        SldShapesComponent.runMyAction(element, act.type, gaugeStatus);
-      }
+    if (act.range.min <= value && act.range.max >= value) {
+      var element = SVG.adopt(svgele.node);
+      SldShapesComponent.runMyAction(element, act.type, gaugeStatus);
     }
   }
 
   static runMyAction(element, type, gaugeStatus: GaugeStatus) {
     element.stop(true);
-    if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.clockwise) {
-      gaugeStatus.actionRef = <GaugeActionStatus>{ type: type, animr: element.animate(3000).rotate(365).loop() };
-    } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.anticlockwise) {
-      gaugeStatus.actionRef = <GaugeActionStatus>{ type: type, animr: element.animate(3000).rotate(-365).loop() };
-    } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.downup) {
-      if (gaugeStatus.actionRef && gaugeStatus.actionRef.type === type) {
-        return;
-      }
-      let eletoanim = Utils.searchTreeStartWith(element.node, 'pm');
-      if (eletoanim) {
-        element = SVG.adopt(eletoanim);
-        let elebox = eletoanim.getBBox();
-        var movefrom = { x: elebox.x, y: elebox.y };
-        var moveto = { x: elebox.x, y: elebox.y - 25 };
-
-        let timeout = setInterval(() => {
-          element.animate(1000).move(moveto.x, moveto.y).animate(1000).move(movefrom.x, movefrom.y);
-        }, 2000);
-        gaugeStatus.actionRef = <GaugeActionStatus>{ type: type, timer: timeout };
-      }
-    } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.stop) {
-      if (gaugeStatus.actionRef && gaugeStatus.actionRef.timer) {
-        clearTimeout(gaugeStatus.actionRef.timer);
-        gaugeStatus.actionRef.timer = null;
-      }
-    } else if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.open) {
+    if (SldShapesComponent.actionsType[type] === SldShapesComponent.actionsType.open) {
       if (eval("$(element.node).find('input').attr('type')") == 'shouche') {
         eval(`$(element.node).find("path[type='switcher']").show()`)
       } else if (eval("$(element.node).find('input').attr('type')") == 'duanluqi') {
