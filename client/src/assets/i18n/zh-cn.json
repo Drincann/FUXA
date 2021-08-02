@@ -169,6 +169,7 @@
     "editor.view-property": "属性",
     "editor.view-clone": "克隆",
     "editor.view-export": "导出",
+    "editor.view-json-scada-export":"导出 json-scada 视图",
     "editor.view-import": "导入视图",
     "editor.general": "常规",
     "editor.shape": "几何图形",
@@ -332,6 +333,13 @@
     "editor.tools-alignbottom-title": "底端对齐",
     "editor.tools-ungroup-title": "取消组合",
     "editor.tools-hyperlink-title": "生成超链接",
+
+
+    "shapes.sld.action-open": "sld-合闸/工作",
+    "shapes.sld.action-close": "sld-分闸/试验",
+    "shapes.sld.action-bad": "sld-未知",
+    "shapes.sld.action-intermediate": "sld-中间",
+
 
     "shapes.action-hide": "隐藏",
     "shapes.action-show": "显示",
