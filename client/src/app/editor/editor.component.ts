@@ -1039,6 +1039,18 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     /**
+     * 导出 svg 文件
+     * @param view 
+     */
+    onExportJsonScadaView(view:View){
+      let filename = 'fuxa-view.svg';
+      let date = new Date();
+      let content = view.svgcontent;
+      let blob = new Blob([content], { type: 'image/svg+xml;charset=utf-8' });
+      FileSaver.saveAs(blob, filename);
+    }
+
+    /**
      * Import view from file (exported in json format MyView.fuxav)
      */
     onImportView() {
