@@ -3,7 +3,7 @@ FROM node:14
 # Create app directory
 WORKDIR /usr/src/app
 
-RUN git clone https://github.com/frangoteam/FUXA.git
+COPY . /usr/src/app/FUXA/
 WORKDIR /usr/src/app/FUXA
 
 # Install server
