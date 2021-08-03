@@ -34,8 +34,9 @@ export class FlexJsonScadaComponent implements OnInit {
      * 获取设置的属性值 map
      */
     public getSvgEleAttribute() {
-        return {
-            'inkscape:label': {
+        let attrs = {};
+        if (this.onUpdateScript && this.onUpdateScript.trim() != '') {
+            attrs['inkscape:label'] = {
                 'attr': 'script',
                 'list': [
                     {
@@ -44,7 +45,9 @@ export class FlexJsonScadaComponent implements OnInit {
                     }
                 ]
             }
-        };
+        }
+
+        return attrs;
     }
 
     /**
