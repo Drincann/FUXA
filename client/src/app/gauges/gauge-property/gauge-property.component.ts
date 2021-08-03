@@ -6,7 +6,8 @@ import { SelOptionsComponent } from '../../gui-helpers/sel-options/sel-options.c
 import { FlexHeadComponent } from './flex-head/flex-head.component';
 import { FlexEventComponent } from './flex-event/flex-event.component';
 import { FlexActionComponent } from './flex-action/flex-action.component';
-import { GaugeProperty, GaugeSettings, View } from '../../_models/hmi';
+import { FlexJsonScadaComponent } from './flex-json-scada/flex-json-scada.component';
+import { GaugeProperty, GaugeSettings, Hmi, View } from '../../_models/hmi';
 import { UserGroups } from '../../_models/user';
 
 @Component({
@@ -20,6 +21,7 @@ export class GaugePropertyComponent implements OnInit {
     @ViewChild('flexhead') flexHead: FlexHeadComponent;
     @ViewChild('flexevent') flexEvent: FlexEventComponent;
     @ViewChild('flexaction') flexAction: FlexActionComponent;
+    @ViewChild('flexjsonscada') flexJsonScada: FlexJsonScadaComponent;
 
     withAlarm = false;
     slideView = true;
@@ -29,6 +31,8 @@ export class GaugePropertyComponent implements OnInit {
     eventsSupported: boolean;
     actionsSupported: any;
     views: View[];
+    // 当前被设置的 svg 对象位于的视图
+    currentView: View;
     defaultValue: any;
     inputs: GaugeSettings[];
 
@@ -43,6 +47,7 @@ export class GaugePropertyComponent implements OnInit {
         this.actionsSupported = this.data.withActions;
         this.views = this.data.views;
         this.inputs = this.data.inputs;
+        this.currentView = this.data.currentView;
 
         this.property = JSON.parse(JSON.stringify(this.data.settings.property));
         if (!this.property) {
@@ -100,6 +105,24 @@ export class GaugePropertyComponent implements OnInit {
         }
         if (this.flexAction) {
             this.data.settings.property.actions = this.flexAction.getActions();
+        }
+        if (this.flexJsonScada) {
+            // 借用 View 对象作为上下文对象，存储 json-scada svg 元素的属性值，并在 editor.component onExportJsonScadaView 作为导出 svg 视图并添加属性的依据
+            for (let view of this.views) {
+                // 找到对应的视图，修改对应视图上下文对象的对应值
+                if (view.id == this.currentView.id) {
+                    // null check
+                    if (!view.jsonScadaId2Attr) {
+                        view.jsonScadaId2Attr = {};
+                    }
+                    if (!view.jsonScadaId2Attr[this.data.settings.id]) {
+                        view.jsonScadaId2Attr[this.data.settings.id] = {};
+                    }
+
+                    view.jsonScadaId2Attr[this.data.settings.id] = this.flexJsonScada.getSvgEleAttribute();
+                    break;
+                }
+            }
         }
         if (this.property.readonly) {
             this.property.readonly = true;

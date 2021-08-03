@@ -527,6 +527,9 @@
     "gauges.property-tooltip-add-event": "添加事件绑定",
     "gauges.property-interval-msec": "间隔（ms）",
 
+    "gauges.property-json-scada": "json-scada 属性",
+    "gauges.property-json-scada-onupdate": "json-scada onupdate 事件回调脚本",
+
     "bag.property-ticks": "刻度",
     "bag.property-divisions": "主刻度",
     "bag.property-subdivisions": "细分刻度",

@@ -71,7 +71,7 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
     @ViewChild('gaugepanel') gaugePanelComponent: GaugeBaseComponent;
     @ViewChild('viewFileImportInput') viewFileImportInput: any;
     @ViewChild('cardsview') cardsview: CardsViewComponent;
-    
+
     readonly colorDefault = { fill: '#FFFFFF', stroke: '#000000' };
 
     fonts = Define.fonts;
@@ -329,7 +329,7 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
         Object.keys(temp).forEach(grpk => {
             grps.push({ name: grpk, shapes: temp[grpk] });
         }),
-        this.shapesGrps = grps;
+            this.shapesGrps = grps;
     }
 
     /**
@@ -1042,12 +1042,21 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
      * 导出 svg 文件
      * @param view 
      */
-    onExportJsonScadaView(view:View){
-      let filename = 'fuxa-view.svg';
-      let date = new Date();
-      let content = view.svgcontent;
-      let blob = new Blob([content], { type: 'image/svg+xml;charset=utf-8' });
-      FileSaver.saveAs(blob, filename);
+    onExportJsonScadaView(view: View) {
+        let filename = 'fuxa-view.svg';
+
+        let contentDocument = $(`<div>${view.svgcontent}</div>`);
+
+        // 这里是 View 对象的 json-scada 表作用到视图上的唯一时机.
+        // View.jsonScadaId2Attr 给出了足够的扩展空间, 这里作为抽象层不要改动,
+        // 添加属性只需要在 hmi.ts 中添加对应模型, 并在 flex-json-scada.component 中提供 GUI 并在 getSvgEleAttribute 方法中导出数据即可
+        for (let svgEleId in view.jsonScadaId2Attr) {
+            for (let attrName in view.jsonScadaId2Attr[svgEleId]) {
+                contentDocument.find(`#${svgEleId}`).attr(attrName, JSON.stringify(view.jsonScadaId2Attr[svgEleId][attrName]))
+            }
+        }
+        let blob = new Blob([contentDocument.html()], { type: 'image/svg+xml;charset=utf-8' });
+        FileSaver.saveAs(blob, filename);
     }
 
     /**
@@ -1229,7 +1238,10 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
                     settings: tempsettings, devices: Object.values(this.projectService.getDevices()), title: title,
                     views: hmi.views, dlgType: dlgType, withEvents: eventsSupported, withActions: actionsSupported, default: defaultValue,
                     inputs: Object.values(this.currentView.items).filter(gs => gs.name && (gs.id.startsWith('HXS_') || gs.id.startsWith('HXI_'))),
-                    names: names
+                    names: names,
+                    // view 将被用于 json-scada 导出的上下文对象
+                    currentView: this.currentView,
+                    hmi: this.hmi,
                 }
             });
         }

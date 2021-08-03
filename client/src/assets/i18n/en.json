@@ -533,6 +533,9 @@
     "gauges.property-tooltip-add-event": "Add event",
     "gauges.property-interval-msec": "Interval (msec.)",
 
+    "gauges.property-json-scada": "json-scada property",
+    "gauges.property-json-scada-onupdate": "json-scada onupdate event callback",
+
     "bag.property-ticks": "Ticks",
     "bag.property-divisions": "Divisions",
     "bag.property-subdivisions": "SubDivisions",

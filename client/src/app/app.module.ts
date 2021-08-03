@@ -89,6 +89,7 @@ import { FlexHeadComponent } from './gauges/gauge-property/flex-head/flex-head.c
 import { FlexEventComponent } from './gauges/gauge-property/flex-event/flex-event.component';
 import { FlexActionComponent } from './gauges/gauge-property/flex-action/flex-action.component';
 import { FlexVariableComponent } from './gauges/gauge-property/flex-variable/flex-variable.component';
+import { FlexJsonScadaComponent } from './gauges/gauge-property/flex-json-scada/flex-json-scada.component';
 import { MatSelectSearchModule } from './gui-helpers/mat-select-search/mat-select-search.module';
 import { HtmlInputComponent } from './gauges/controls/html-input/html-input.component';
 import { HtmlButtonComponent } from './gauges/controls/html-button/html-button.component';
@@ -193,6 +194,7 @@ export function createTranslateLoader(http: HttpClient) {
         FlexVariableComponent,
         FlexVariablesMappingComponent,
         FlexVariableMapComponent,
+        FlexJsonScadaComponent,
         ValueComponent,
         DialogDraggableDirective,
         EnumToArrayPipe,

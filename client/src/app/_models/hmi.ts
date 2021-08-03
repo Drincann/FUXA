@@ -8,6 +8,7 @@ export class Hmi {
     views: View[] = [];
 }
 
+// 被用于 json-scada 导出的上下文对象，该对象在 editor.component.ts 中传入 gauge-property.component(设置面板) 组件
 export class View {
     /** View id, random number */
     id: string = '';
@@ -23,12 +24,28 @@ export class View {
     svgcontent: string = '';
     /** Type of view SVG/CARDS */
     type: ViewType;
+    // json-scada svg 元素的用于数据、动画绑定的属性
+    // id -> {attr -> value}
+    jsonScadaId2Attr: {
+        [id: string]: {
+            ['inkscape:label']?: inkscapeLabel;
+        }
+    };
+}
+
+// json-scada svg 的 inkscape:label 属性值模型
+export interface inkscapeLabel {
+    attr: string;
+    list: {
+        evt: string;
+        param: string;
+    }[]
 }
 
 export enum ViewType {
     svg = 'SVG',
-    cards ='CARDS'
-} 
+    cards = 'CARDS'
+}
 
 export class LayoutSettings {
     /** Start view (home) */
@@ -154,10 +171,10 @@ export enum GaugeActionsType {
 }
 
 export enum SLDActionsType {
-  open = 'shapes.sld.action-open',
-  close = 'shapes.sld.action-close',
-  bad = 'shapes.sld.action-bad',
-  intermediate = 'shapes.sld.action-intermediate'
+    open = 'shapes.sld.action-open',
+    close = 'shapes.sld.action-close',
+    bad = 'shapes.sld.action-bad',
+    intermediate = 'shapes.sld.action-intermediate'
 }
 
 export class GaugeAction {
