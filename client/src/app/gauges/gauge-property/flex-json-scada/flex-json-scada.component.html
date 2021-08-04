@@ -1,4 +1,18 @@
 <div class="my-form-field">
-    <span>{{'gauges.property-json-scada-onupdate' | translate}}</span>
-    <textarea name="" id="" cols="30" rows="10" [(ngModel)]="onUpdateScript"></textarea>
+    <div class="my-form-field">
+        <span>{{'gauges.property-json-scada-onupdate' | translate}}</span>
+        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="onUpdateScript"></textarea>
+    </div>
+
+    <div class="my-form-field">
+        <!-- TODO -->
+        <span>{{'gauges.property-json-scada-tag' | translate}}</span>
+        <input [(ngModel)]="tag" style="width: 220px" type="text">
+    </div>
+
+    <div class="toolbox">
+        <button mat-icon-button (click)="onAddInput()">
+            <mat-icon>add_circle_outline</mat-icon>
+        </button>
+    </div>
 </div>

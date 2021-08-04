@@ -529,6 +529,7 @@
 
     "gauges.property-json-scada": "json-scada 属性",
     "gauges.property-json-scada-onupdate": "json-scada onupdate 事件回调脚本",
+    "gauges.property-json-scada-tag": "json-scada tag",
 
     "bag.property-ticks": "刻度",
     "bag.property-divisions": "主刻度",

@@ -119,7 +119,17 @@ export class GaugePropertyComponent implements OnInit {
                         view.jsonScadaId2Attr[this.data.settings.id] = {};
                     }
 
+                    if (!view.jsonScadaSettings) {
+                        view.jsonScadaSettings = {};
+                    }
+                    if (!view.jsonScadaSettings[this.data.settings.id]) {
+                        view.jsonScadaSettings[this.data.settings.id] = {};
+                    }
+
+                    // 这里的调用在保存 View 为 svg 时会参与 svg attr set
                     view.jsonScadaId2Attr[this.data.settings.id] = this.flexJsonScada.getSvgEleAttribute();
+                    // 这个调用仅用作保存设置状态, 即持久化设置
+                    view.jsonScadaSettings[this.data.settings.id] = this.flexJsonScada.getSvgSettings();
                     break;
                 }
             }

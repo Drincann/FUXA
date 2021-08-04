@@ -1,5 +1,6 @@
 import { Tag, Device } from './device';
 import { extend } from 'webdriver-js-extender';
+import { StateRange } from '../_svgActDef/SvgActionCodeGenerator';
 
 export class Hmi {
     /** Layout for navigation menu, header bar, ...  */
@@ -29,6 +30,14 @@ export class View {
     jsonScadaId2Attr: {
         [id: string]: {
             ['inkscape:label']?: inkscapeLabel;
+        }
+    };
+    // 仅用于保存设置状态
+    jsonScadaSettings: {
+        [id: string]: {
+            tag?: string;
+            extCode?: string;
+            stateRanges?: StateRange[];
         }
     };
 }

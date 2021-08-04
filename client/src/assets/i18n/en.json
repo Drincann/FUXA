@@ -535,6 +535,7 @@
 
     "gauges.property-json-scada": "json-scada property",
     "gauges.property-json-scada-onupdate": "json-scada onupdate event callback",
+    "gauges.property-json-scada-tag": "json-scada tag",
 
     "bag.property-ticks": "Ticks",
     "bag.property-divisions": "Divisions",

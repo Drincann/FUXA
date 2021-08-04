@@ -11,6 +11,7 @@ import {
     inkscapeLabel,
     View
 } from '../../../_models/hmi';
+import { StateRange, SvgActionCodeGenerator } from '../../../_svgActDef/SvgActionCodeGenerator';
 
 @Component({
     selector: 'flex-json-scada',
@@ -18,15 +19,37 @@ import {
     styleUrls: ['./flex-json-scada.component.css']
 })
 export class FlexJsonScadaComponent implements OnInit {
-    @Input() data: { currentView: View, settings: { id: string, label: string, name: string }, views: View[] };
-    private onUpdateScript: string;
-
+    @Input() data: {
+        currentView: View, views: View[], settings: {
+            id?: string;
+            label?: string;
+            name?: string;
+            type?: string;
+            property?: Record<string, any>
+        }
+    };
+    private extCode: string;
+    private tag: string;
+    private stateRanges: StateRange[];
     constructor(public translateService: TranslateService) {
     }
 
     ngOnInit() {
         try {
-            this.onUpdateScript = this._unescape(this.data.currentView.jsonScadaId2Attr[this.data.settings.id]['inkscape:label'].list[0].param);
+            this.extCode = this._unescape(
+                this.data.currentView.jsonScadaSettings
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id]
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id].extCode);
+
+            this.tag =
+                this.data.currentView.jsonScadaSettings
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id]
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id].tag;
+
+            this.stateRanges =
+                this.data.currentView.jsonScadaSettings
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id]
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id].stateRanges;
         } catch (error) { }
     }
 
@@ -35,19 +58,40 @@ export class FlexJsonScadaComponent implements OnInit {
      */
     public getSvgEleAttribute() {
         let attrs = {};
-        if (this.onUpdateScript && this.onUpdateScript.trim() != '') {
+
+        if (SvgActionCodeGenerator.getInstance(this.data.settings.type) != null) {
             attrs['inkscape:label'] = {
                 'attr': 'script',
                 'list': [
                     {
                         'evt': 'exec_on_update',
-                        'param': this.onUpdateScript,
+                        'param': SvgActionCodeGenerator.getInstance(this.data.settings.type).generateCode({
+                            tag: this.tag,
+                            stateRanges: this.stateRanges,
+                            eleId: this.data.settings.id,
+                            extCode: this.extCode,
+                        }),
                     }
                 ]
             }
         }
 
         return attrs;
+    }
+
+    /**
+     * 仅用作 gauge-property.component 调用保存至上下文变量 View 所用
+     * 不会参与 svg attr 的获取
+     */
+    public getSvgSettings() {
+        if (this.tag == null && this.stateRanges == null) {
+            return undefined;
+        }
+        return {
+            tag: this.tag,
+            stateRanges: this.stateRanges,
+            extCode: this.extCode,
+        }
     }
 
     /**
