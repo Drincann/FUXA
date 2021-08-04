@@ -1,5 +1,3 @@
-import { Truck } from './Truck';
-
 /**
  * 这是一个代码生成器的抽象超类, 提供了可复用的基本方法
  * 用来根据不同的 svg shape 类型, 以及提供的 tag stateRanges eleId extCode 生成 json-scada 
@@ -13,10 +11,6 @@ import { Truck } from './Truck';
  */
 export abstract class SvgActionCodeGenerator {
     public actions = [];
-
-    private static objectMap: Map<string, SvgActionCodeGenerator> = new Map([
-        ['svg-ext-sld-truck', new Truck],
-    ]);
 
     /**
      * 这是代码生成器的主要方法, 其子类负责实现 stateRangesMapProcessor 并调用该方法
@@ -44,14 +38,6 @@ export abstract class SvgActionCodeGenerator {
                 }
             `
         });
-    }
-
-    /**
-     * @factory
-     * 用来根据 shape 的 typeTag 获取实例
-     */
-    public static getInstance(shapeTypeTag: string): SvgActionCodeGenerator {
-        return this.objectMap.get(shapeTypeTag);
     }
 }
 
