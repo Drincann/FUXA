@@ -14,6 +14,8 @@ export abstract class SvgActionCodeGenerator {
 
     /**
      * 这是代码生成器的主要方法, 其子类负责实现 stateRangesMapProcessor 并调用该方法
+     * TODO 注意在生成的代码中避免使用单引号 ', 这是因为 FUXA 后端在持久化 View 对象时的 sql 中
+     * 使用了单引号包裹而没有做任何处理, 使用单引号会导致服务端持久化失败
      * @param tag json-scada 的 tag
      * svgTypeTag 一般为 svg-ext-{typeId}-{name}
      * svg-ext 前缀位于 src/app/gauges/shapes/ 下对应组件中的 TypeTag 属性, 在该属性处拼接
@@ -64,9 +66,9 @@ export interface StateRange {
 function generateJsonScadaCallbackCode(options: { tag: string, code: string, eleId: string }): string {
     return `
     var api = {
-        tagName: '${options.tag}',
-        tagData: $V('${options.tag}'),
-        elementId: '${options.eleId}'
+        tagName: "${options.tag}",
+        tagData: $V("${options.tag}"),
+        elementId: "${options.eleId}"
     }
     ${options.code}
     `;

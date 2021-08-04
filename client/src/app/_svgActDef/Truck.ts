@@ -9,13 +9,13 @@ export class Truck extends SvgActionCodeGenerator {
                 if (stateRange.state == 'in') {
                     return `
                     if(api.tagData >= ${stateRange.min} && api.tagData <= ${stateRange.max}){
-                        $('#${eleId}').find("path[type='switcher']").show();
+                        $("#${eleId}").find(\`path[type="switcher"]\`).show();
                     }
                     `;
                 } else if (stateRange.state == 'out') {
                     return `
                     if(api.tagData >= ${stateRange.min} && api.tagData <= ${stateRange.max}){
-                        $('#${eleId}').find("path[type='switcher']").hide();
+                        $("#${eleId}").find(\`path[type="switcher"]\`).hide();
                     }
                     `;
                 }
