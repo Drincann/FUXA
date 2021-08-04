@@ -28,9 +28,7 @@ export class View {
     // json-scada svg 元素的用于数据、动画绑定的属性
     // id -> {attr -> value}
     jsonScadaId2Attr: {
-        [id: string]: {
-            ['inkscape:label']?: inkscapeLabel;
-        }
+        [id: string]: jsonScadaEleOptions;
     };
     // 仅用于保存设置状态
     jsonScadaSettings: {
@@ -42,13 +40,19 @@ export class View {
     };
 }
 
-// json-scada svg 的 inkscape:label 属性值模型
-export interface inkscapeLabel {
+export interface jsonScadaEleOptions {
+    'inkscape:label'?: inkscapeLabel;
+}
+export type inkscapeLabel = [inkscapeLabelOnUpdateScript, inkscapeLabelTag];
+export interface inkscapeLabelOnUpdateScript {
     attr: string;
     list: {
         evt: string;
         param: string;
     }[]
+}
+export interface inkscapeLabelTag {
+    tag: string;
 }
 
 export enum ViewType {

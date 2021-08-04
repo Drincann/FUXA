@@ -1052,7 +1052,12 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
         // 添加属性只需要在 hmi.ts 中添加对应模型, 并在 flex-json-scada.component 中提供 GUI 并在 getSvgEleAttribute 方法中导出数据即可
         for (let svgEleId in view.jsonScadaId2Attr) {
             for (let attrName in view.jsonScadaId2Attr[svgEleId]) {
-                contentDocument.find(`#${svgEleId}`).attr(attrName, JSON.stringify(view.jsonScadaId2Attr[svgEleId][attrName]))
+                contentDocument.find(`#${svgEleId}`).attr(attrName,
+                    view.jsonScadaId2Attr[svgEleId][attrName]
+                    && view.jsonScadaId2Attr[svgEleId][attrName].map
+                    && view.jsonScadaId2Attr[svgEleId][attrName].map(value => JSON.stringify(value)).join(',')
+                    || ''
+                );
             }
         }
         let blob = new Blob([contentDocument.html()], { type: 'image/svg+xml;charset=utf-8' });

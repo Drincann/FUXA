@@ -9,6 +9,9 @@ import {
     GaugeProperty,
     GaugeSettings,
     inkscapeLabel,
+    inkscapeLabelOnUpdateScript,
+    inkscapeLabelTag,
+    jsonScadaEleOptions,
     View
 } from '../../../_models/hmi';
 import { StateRange, SvgActionCodeGenerator } from '../../../_svgActDef/SvgActionCodeGenerator';
@@ -31,7 +34,6 @@ export class FlexJsonScadaComponent implements OnInit {
     private extCode: string;
     private tag: string;
     private stateRanges: StateRange[];
-    private test = [1, 2, 3, 4];
     private svgActionCodeGenerator: SvgActionCodeGenerator = null;
     constructor(public translateService: TranslateService) { }
 
@@ -60,27 +62,25 @@ export class FlexJsonScadaComponent implements OnInit {
     /**
      * 获取设置的属性值 map
      */
-    public getSvgEleAttribute() {
-        let attrs = {};
-
+    public getSvgEleAttribute(): jsonScadaEleOptions {
         if (this.svgActionCodeGenerator != null) {
-            attrs['inkscape:label'] = {
-                'attr': 'script',
-                'list': [
-                    {
-                        'evt': 'exec_on_update',
-                        'param': this.svgActionCodeGenerator.generateCode({
-                            tag: this.tag,
-                            stateRanges: this.stateRanges,
-                            eleId: this.data.settings.id,
-                            extCode: this.extCode,
-                        }),
-                    }
-                ]
-            }
+            let attrs: inkscapeLabelOnUpdateScript = {
+                attr: 'script',
+                list: [{
+                    evt: 'exec_on_update',
+                    // 在这个属性生成代码
+                    param: this.svgActionCodeGenerator.generateCode({
+                        tag: this.tag,
+                        stateRanges: this.stateRanges,
+                        eleId: this.data.settings.id,
+                        extCode: this.extCode,
+                    }),
+                }]
+            },
+                tag: inkscapeLabelTag = { tag: this.tag };
+            return { 'inkscape:label': [attrs, tag] };
         }
-
-        return attrs;
+        return null;
     }
 
     /**
