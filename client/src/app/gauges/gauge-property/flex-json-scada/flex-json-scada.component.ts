@@ -12,7 +12,7 @@ import {
     View
 } from '../../../_models/hmi';
 import { StateRange, SvgActionCodeGenerator } from '../../../_svgActDef/SvgActionCodeGenerator';
-
+import { SvgActionCodeGeneratorFactory } from '../../../_svgActDef/SvgActionCodeGeneratorFactory';
 @Component({
     selector: 'flex-json-scada',
     templateUrl: './flex-json-scada.component.html',
@@ -31,8 +31,9 @@ export class FlexJsonScadaComponent implements OnInit {
     private extCode: string;
     private tag: string;
     private stateRanges: StateRange[];
-    constructor(public translateService: TranslateService) {
-    }
+    private test = [1, 2, 3, 4];
+    private svgActionCodeGenerator: SvgActionCodeGenerator = null;
+    constructor(public translateService: TranslateService) { }
 
     ngOnInit() {
         try {
@@ -49,7 +50,10 @@ export class FlexJsonScadaComponent implements OnInit {
             this.stateRanges =
                 this.data.currentView.jsonScadaSettings
                 && this.data.currentView.jsonScadaSettings[this.data.settings.id]
-                && this.data.currentView.jsonScadaSettings[this.data.settings.id].stateRanges;
+                && this.data.currentView.jsonScadaSettings[this.data.settings.id].stateRanges
+                || [];
+
+            this.svgActionCodeGenerator = SvgActionCodeGeneratorFactory.getInstance(this.data.settings.type);
         } catch (error) { }
     }
 
@@ -59,13 +63,13 @@ export class FlexJsonScadaComponent implements OnInit {
     public getSvgEleAttribute() {
         let attrs = {};
 
-        if (SvgActionCodeGenerator.getInstance(this.data.settings.type) != null) {
+        if (this.svgActionCodeGenerator != null) {
             attrs['inkscape:label'] = {
                 'attr': 'script',
                 'list': [
                     {
                         'evt': 'exec_on_update',
-                        'param': SvgActionCodeGenerator.getInstance(this.data.settings.type).generateCode({
+                        'param': this.svgActionCodeGenerator.generateCode({
                             tag: this.tag,
                             stateRanges: this.stateRanges,
                             eleId: this.data.settings.id,
@@ -122,4 +126,15 @@ export class FlexJsonScadaComponent implements OnInit {
         }
     }
 
+    addRangeStateView() {
+        this.stateRanges.push({
+            state: this.svgActionCodeGenerator.actions[0],
+            min: 0,
+            max: 0,
+        });
+    }
+
+    removeRangeStateView(index: number) {
+        this.stateRanges.splice(index, 1);
+    }
 }

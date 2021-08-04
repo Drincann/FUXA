@@ -1,18 +1,50 @@
-<div class="my-form-field">
-    <div class="my-form-field">
-        <span>{{'gauges.property-json-scada-onupdate' | translate}}</span>
-        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="onUpdateScript"></textarea>
-    </div>
+<div class="toolbox">
+    <button mat-icon-button (click)="addRangeStateView()">
+        <mat-icon>add_circle_outline</mat-icon>
+    </button>
+</div>
 
+<div>
     <div class="my-form-field">
         <!-- TODO -->
         <span>{{'gauges.property-json-scada-tag' | translate}}</span>
         <input [(ngModel)]="tag" style="width: 220px" type="text">
     </div>
+</div>
 
-    <div class="toolbox">
-        <button mat-icon-button (click)="onAddInput()">
-            <mat-icon>add_circle_outline</mat-icon>
+<div style="padding-top: 15px;">
+    <div class="my-form-field">
+        <span>{{'gauges.property-json-scada-onupdate' | translate}}</span>
+        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="onUpdateScript"></textarea>
+    </div>
+</div>
+
+<div *ngFor="let stateRange of stateRanges; index as i">
+    <div class="my-form-field">
+        <div class="my-form-field">
+            <span>{{'gauges.property-json-scada-min' | translate}}</span>
+            <input numberOnly [(ngModel)]="stateRange.min" type="text" style="width: 80px">
+        </div>
+        <div class="my-form-field" style="padding-left: 20px;">
+            <span>{{'gauges.property-json-scada-max' | translate}}</span>
+            <input numberOnly [(ngModel)]="stateRange.max" type="text" style="width: 80px">
+        </div>
+    </div>
+
+    <div style="display: inline-block; padding-left: 200px;">
+        <div class="my-form-field" style="width: 140px;">
+            <span>{{'gauges.property-json-scada-actionType' | translate}}</span>
+            <mat-select [(value)]="stateRange.state">
+                <mat-option *ngFor="let actionType of svgActionCodeGenerator.actions" [value]="actionType">
+                    {{ actionType }}
+                </mat-option>
+            </mat-select>
+        </div>
+    </div>
+    <div style="display: inline-block; text-align: right;">
+        <button mat-icon-button (click)="removeRangeStateView(i)" class="remove">
+            <mat-icon>clear</mat-icon>
         </button>
     </div>
+    <hr>
 </div>
