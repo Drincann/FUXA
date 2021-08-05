@@ -1,6 +1,7 @@
 import { SvgActionCodeGenerator } from './SvgActionCodeGenerator';
 import { Truck } from './Truck';
 import { CircuitBreaker } from './CircuitBreaker';
+import { Disconnector } from './Disconnector';
 
 export class SvgActionCodeGeneratorFactory {
     private static objectMap: Map<string, SvgActionCodeGenerator> = new Map([
@@ -12,6 +13,7 @@ export class SvgActionCodeGeneratorFactory {
          */
         ['svg-ext-sld-truck', new Truck],
         ['svg-ext-sld-circuitBreaker', new CircuitBreaker],
+        ['svg-ext-sld-disconnector', new Disconnector],
     ]);
 
     /**
