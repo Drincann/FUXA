@@ -127,6 +127,7 @@ export class FlexJsonScadaComponent implements OnInit {
     }
 
     addRangeStateView() {
+        if (!this.svgActionCodeGenerator) return;
         this.stateRanges.push({
             state: this.svgActionCodeGenerator.actions[0],
             min: 0,
