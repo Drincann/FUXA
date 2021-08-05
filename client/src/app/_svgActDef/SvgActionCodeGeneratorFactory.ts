@@ -1,5 +1,6 @@
 import { SvgActionCodeGenerator } from './SvgActionCodeGenerator';
 import { Truck } from './Truck';
+import { CircuitBreaker } from './CircuitBreaker';
 
 export class SvgActionCodeGeneratorFactory {
     private static objectMap: Map<string, SvgActionCodeGenerator> = new Map([
@@ -10,6 +11,7 @@ export class SvgActionCodeGeneratorFactory {
          * {name} 同样来自该文件，是每个不同 shape 定义的 name 属性值
          */
         ['svg-ext-sld-truck', new Truck],
+        ['svg-ext-sld-circuitBreaker', new CircuitBreaker],
     ]);
 
     /**
