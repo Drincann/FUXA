@@ -17,10 +17,6 @@ export abstract class SvgActionCodeGenerator {
      * TODO 注意在生成的代码中避免使用单引号 ', 这是因为 FUXA 后端在持久化 View 对象时的 sql 中
      * 使用了单引号包裹而没有做任何处理, 使用单引号会导致服务端持久化失败
      * @param tag json-scada 的 tag
-     * svgTypeTag 一般为 svg-ext-{typeId}-{name}
-     * svg-ext 前缀位于 src/app/gauges/shapes/ 下对应组件中的 TypeTag 属性, 在该属性处拼接
-     * {typeId} 来自 src/assets/lib/svgeditor/shapes/ 下你的 svg 定义文件(.js) 中的 typeId
-     * {name} 同样来自该文件，是每个不同 shape 定义的 name 属性值
      * @param stateRanges 数据范围, 以及对应生效的状态
      * @param eleId 对应 svg 视图对象在环境中的 id
      * @param extCode 开放能力, 任意代码, 该属性的值将被添加在生成的代码后
