@@ -43,7 +43,9 @@ export class View {
 export interface jsonScadaEleOptions {
     'inkscape:label'?: inkscapeLabel;
 }
-export type inkscapeLabel = [inkscapeLabelOnUpdateScript, inkscapeLabelTag];
+export type inkscapeLabel =
+    [inkscapeLabelGet]
+    | [inkscapeLabelOnUpdateScript, inkscapeLabelTag];
 export interface inkscapeLabelOnUpdateScript {
     attr: string;
     list: {
@@ -52,6 +54,10 @@ export interface inkscapeLabelOnUpdateScript {
     }[]
 }
 export interface inkscapeLabelTag {
+    tag: string;
+}
+export interface inkscapeLabelGet {
+    attr: string;
     tag: string;
 }
 

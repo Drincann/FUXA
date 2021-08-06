@@ -1055,9 +1055,18 @@ export class EditorComponent implements OnInit, AfterViewInit, OnDestroy {
                 contentDocument.find(`#${svgEleId}`).attr(attrName,
                     view.jsonScadaId2Attr[svgEleId][attrName]
                     && view.jsonScadaId2Attr[svgEleId][attrName].map
-                    && view.jsonScadaId2Attr[svgEleId][attrName].map(value => JSON.stringify(value)).join(',')
+                    && view.jsonScadaId2Attr[svgEleId][attrName]
+                        .map(value => JSON.stringify(value))
+                        // 过滤掉空值
+                        .filter(v => v != undefined)
+                        .join(',')
                     || ''
                 );
+                // 对 text 内部包一层 tspan 标签, 这是为了让 json-scada 中的 text 生效
+                const textSvg = contentDocument.find(`#${svgEleId}`).filter((i, v) => v != undefined && v.localName == 'text');
+                if (textSvg.length != 0) {
+                    textSvg.each((i, v) => $(v).html(`<tspan>${$(v).html()}</tspan>`))
+                }
             }
         }
         let blob = new Blob([contentDocument.html()], { type: 'image/svg+xml;charset=utf-8' });

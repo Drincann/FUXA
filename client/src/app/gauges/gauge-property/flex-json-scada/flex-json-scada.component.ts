@@ -9,6 +9,7 @@ import {
     GaugeProperty,
     GaugeSettings,
     inkscapeLabel,
+    inkscapeLabelGet,
     inkscapeLabelOnUpdateScript,
     inkscapeLabelTag,
     jsonScadaEleOptions,
@@ -63,6 +64,14 @@ export class FlexJsonScadaComponent implements OnInit {
      * 获取设置的属性值 map
      */
     public getSvgEleAttribute(): jsonScadaEleOptions {
+        // 指定了 tag 的文本
+        if (this.data.settings.type == 'svg-ext-shapes-text'
+            && typeof this.tag == 'string'
+            && this.tag != '') {
+            return { 'inkscape:label': [{ attr: 'get', tag: this.tag }] };
+        }
+
+        // 具有动画的 svg 视图对象
         if (this.svgActionCodeGenerator != null) {
             let attrs: inkscapeLabelOnUpdateScript = {
                 attr: 'script',
