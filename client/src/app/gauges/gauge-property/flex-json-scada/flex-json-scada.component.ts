@@ -65,7 +65,7 @@ export class FlexJsonScadaComponent implements OnInit {
      */
     public getSvgEleAttribute(): jsonScadaEleOptions {
         // 指定了 tag 的文本
-        if (this.data.settings.type == 'svg-ext-shapes-text'
+        if ((this.data.settings.type == 'svg-ext-shapes-text' || this.data.settings.type == 'svg-ext-shapes-select')
             && typeof this.tag == 'string'
             && this.tag != '') {
             return { 'inkscape:label': [{ attr: 'get', tag: this.tag }] };
