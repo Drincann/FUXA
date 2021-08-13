@@ -9,6 +9,8 @@
         <button mat-menu-item (click)="onSaveProjectAs()">{{'header.saveas-project' | translate}}</button>
         <mat-divider class="menu-separator"></mat-divider>
         <button mat-menu-item (click)="onOpenProject();$event.stopPropagation()">{{'header.open-project' | translate}}</button>
+        <mat-divider class="menu-separator"></mat-divider>
+        <button mat-menu-item (click)="onJsonScadaList()">{{'header.json-scada-list' | translate}}</button>
         <!-- <button mat-menu-item (click)="onImportVariable();$event.stopPropagation()">Import Variable</button> -->
         <input type="file" #fileImportInput style="display: none" id="projectFileUpload" (change)="onFileChangeListener($event)" accept=".fuxap,.json" />
     </mat-menu>

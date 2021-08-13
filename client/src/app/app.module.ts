@@ -123,6 +123,8 @@ import { GridsterModule } from 'angular-gridster2';
 import { httpInterceptorProviders } from './_helpers/auth-interceptor';
 import { environment } from '../environments/environment';
 
+import {JsonScadaListComponent} from './header/json-scada-list/json-scada-list.component'
+
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -225,7 +227,8 @@ export function createTranslateLoader(http: HttpClient) {
         DialogItemText,
         NgxUplotComponent,
         ChartUplotComponent,
-        CardsViewComponent
+        CardsViewComponent,
+        JsonScadaListComponent,
    ],
     imports: [
         BrowserModule,
@@ -280,6 +283,7 @@ export function createTranslateLoader(http: HttpClient) {
         { provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }
     ],
     entryComponents: [
+        JsonScadaListComponent,
         DialogDocProperty,
         DialogDocName,
         DialogNewDoc,

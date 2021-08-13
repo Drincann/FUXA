@@ -11,6 +11,7 @@ import { ProjectService } from '../_services/project.service';
 import { HelpData } from '../_models/hmi';
 import { TutorialComponent } from '../help/tutorial/tutorial.component';
 import { TranslateService } from '@ngx-translate/core';
+import { JsonScadaListComponent } from './json-scada-list/json-scada-list.component';
 
 @Component({
     moduleId: module.id,
@@ -123,6 +124,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
     onOpenProject() {
         let ele = document.getElementById('projectFileUpload') as HTMLElement;
         ele.click();
+    }
+
+    onJsonScadaList() {
+        this.dialog.open(JsonScadaListComponent, {
+            position: { top: '60px' },
+            data: {
+                title: 'json-scada 视图列表',
+                views: this.projectService.getHmi().views,
+            }
+        });
     }
 
     /**
