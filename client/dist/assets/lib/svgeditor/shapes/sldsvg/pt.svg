@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 13.97 13.97"
+   version="1.1"
+   id="svg1247"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="pt1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1249"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="21.465993"
+     inkscape:cx="16.491201"
+     inkscape:cy="17.003639"
+     inkscape:window-width="1883"
+     inkscape:window-height="1004"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     scale-x="0.565" />
+  <defs
+     id="defs1244">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1225"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       lpeversion="0" />
+  </defs>
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1340"
+       transform="translate(-0.82804039,-4.6633043)">
+      <circle
+         r="3.175"
+         cy="15.076933"
+         cx="10.647635"
+         id="path4528-7-9-7"
+         style="fill:none;fill-rule:evenodd;stroke:#92d050;stroke-width:0.6;stroke-opacity:1" />
+      <circle
+         r="3.175"
+         cy="12.060362"
+         cx="7.9138403"
+         id="path4528-7-3-0"
+         style="fill:none;fill-rule:evenodd;stroke:#92d050;stroke-width:0.6;stroke-opacity:1" />
+      <circle
+         r="3.175"
+         cy="15.080763"
+         cx="5.1292562"
+         id="path4528-7-8-3"
+         style="fill:none;fill-rule:evenodd;stroke:#92d050;stroke-width:0.6;stroke-opacity:1" />
+      <path
+         style="fill:#92d050;fill-opacity:1;stroke:#92d050;stroke-width:0.6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 7.9415887,4.9167315 c 0,1.322902 0,2.645818 0,3.96875"
+         id="path10-6-0-3-0-6-9"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect1225"
+         inkscape:original-d="m 7.9415887,4.9167315 c 2.7e-4,1.322902 2.7e-4,2.645818 0,3.96875"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+</svg>
